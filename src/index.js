@@ -8,12 +8,12 @@ let B = +B_.split(" ").join('');
 let C_ = equat.substring(indexBeforeB+4);
 let C = +C_.split(" ").join('');
 const Descrim = Math.pow(B,2)-4*A*C;
-const Numerator = -B-Math.sqrt(Descrim);
-const Numerator2 = -B+Math.sqrt(Descrim);
+const Numerator = -B-Math.round(Math.sqrt(Descrim));
+const Numerator2 = -B+Math.round(Math.sqrt(Descrim));
 const Denominator = 2*A;
 const x1_2 = [];
-const x1 = parseInt(Numerator/Denominator);
-const x2 = parseInt(Numerator2/Denominator);
+const x1 = Math.round(Numerator/Denominator);
+const x2 = Math.round(Numerator2/Denominator);
 x1_2.push(x1);
 x1_2.push(x2);
  return x1_2.sort(function(a, b) {
